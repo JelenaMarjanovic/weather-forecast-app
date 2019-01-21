@@ -17,6 +17,8 @@
 
   <!-- Load AngularJS via CDN -->
   <script src="https://code.angularjs.org/1.5.11/angular.min.js"></script>
+  <!-- Load additional AngularJS modules -->
+  <script src="https://code.angularjs.org/1.5.11/angular-route.min.js"></script>
   <!-- JS App -->
   <script src="./app.js"></script>
 </head>
@@ -38,7 +40,7 @@
   </header>
 
   <div class="container">
-
+    <div ng-view></div>
   </div>
 
   <div class="navbar navbar-inverse navbar-fixed-bottom">

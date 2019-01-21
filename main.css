@@ -8,4 +8,7 @@ textarea {
 
 body {
   background-color: gray;
+  /* Fix header and footer covering the main content */
+  padding-top: 51px;
+  padding-bottom: 56px;
 }
