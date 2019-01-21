@@ -1,2 +1,1 @@
-# weather-forecast-app
-Angular Weather Forecast SPA
+# Weather Forecast SPA
