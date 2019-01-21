@@ -1,0 +1,11 @@
+html,
+body,
+input,
+select,
+textarea {
+  font-size: 1.05rem;
+}
+
+body {
+  background-color: gray;
+}
