@@ -14,7 +14,29 @@ weatherApp.config(function($routeProvider) {
     });
 });
 
-// CONTROLLERS
-weatherApp.controller('homeController', ['$scope', function($scope) {}]);
+// SERVICES
+weatherApp.service('cityService', function() {
+  this.city = 'Belgrade';
+});
 
-weatherApp.controller('forecastController', ['$scope', function($scope) {}]);
+// CONTROLLERS
+weatherApp.controller('homeController', [
+  '$scope',
+  'cityService',
+  function($scope, cityService) {
+    $scope.city = cityService.city;
+
+    // EVENT LISTENER
+    $scope.$watch('city', function() {
+      cityService.city = $scope.city;
+    });
+  }
+]);
+
+weatherApp.controller('forecastController', [
+  '$scope',
+  'cityService',
+  function($scope, cityService) {
+    $scope.city = cityService.city;
+  }
+]);
