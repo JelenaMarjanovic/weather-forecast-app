@@ -19,3 +19,18 @@ input[type="text"]:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px grey;
   outline: 0 none;
 }
+
+/* Remove decoration and hover effects */
+a.days,
+a.days:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.chosen-day {
+  background-color: #222222;
+  color: lightgrey !important;
+  font-weight: bold;
+  padding: 3px;
+}
