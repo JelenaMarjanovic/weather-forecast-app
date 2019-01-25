@@ -11,6 +11,10 @@ weatherApp.config(function($routeProvider) {
     .when('/forecast', {
       templateUrl: './pages/forecast.htm',
       controller: 'forecastController'
+    })
+    .when('/forecast/:days', {
+      templateUrl: './pages/forecast.htm',
+      controller: 'forecastController'
     });
 });
 
@@ -36,10 +40,11 @@ weatherApp.controller('homeController', [
 weatherApp.controller('forecastController', [
   '$scope',
   '$resource',
+  '$routeParams',
   'cityService',
-  function($scope, $resource, cityService) {
+  function($scope, $resource, $routeParams, cityService) {
     $scope.city = cityService.city;
-    $scope.days = '3';
+    $scope.days = $routeParams.days || '1';
 
     // Fetch API data
     $scope.weatherAPI = $resource(
