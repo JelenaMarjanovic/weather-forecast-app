@@ -1,14 +1,19 @@
 // CONTROLLERS
 weatherApp.controller('homeController', [
   '$scope',
+  '$location',
   'cityService',
-  function($scope, cityService) {
+  function($scope, $location, cityService) {
     $scope.city = cityService.city;
 
-    // EVENT LISTENER
+    // EVENT LISTENERS
     $scope.$watch('city', function() {
       cityService.city = $scope.city;
     });
+
+    $scope.submit = function() {
+      $location.path('/forecast');
+    };
   }
 ]);
 
