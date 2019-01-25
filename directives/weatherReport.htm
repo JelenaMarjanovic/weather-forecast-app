@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ convertDate({ timestamp: weatherDay.dt }) | date: dateFormat }}</h3>
+  </div>
+
+  <div class="panel-body">
+    Weather: {{ weatherDay.weather[0].main }}
+    <br>
+    Temperature: {{ convertToStandard({ tempInK: weatherDay.temp.max }) }}&#176;C / {{ convertToStandard({ tempInK:
+    weatherDay.temp.min }) }}&#176;C
+    <br>
+    Humidity: {{ weatherDay.humidity }}%
+    <br>
+    Pressure: {{ weatherDay.pressure }} hPa
+  </div>
+</div>
