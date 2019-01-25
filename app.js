@@ -60,6 +60,8 @@ weatherApp.controller('forecastController', [
       APPID: '279b4be6d54c8bf6ea9b12275a567156'
     });
 
-    console.log($scope.weatherResult);
+    $scope.convertToCelsius = function(degK) {
+      return Math.round(degK - 273.15);
+    };
   }
 ]);

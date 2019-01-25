@@ -11,9 +11,9 @@
         <div class="panel-body">
           Weather: {{ w.weather[0].main }}
           <br>
-          Daytime temperature: {{ w.temp.day }} K
+          Temperature: {{ convertToCelsius(w.temp.max) }}&#176;C / {{ convertToCelsius(w.temp.min) }}&#176;C
           <br>
-          Humidity: {{ w.humidity }}&#37;
+          Humidity: {{ w.humidity }}%
           <br>
           Pressure: {{ w.pressure }} hPa
         </div>
